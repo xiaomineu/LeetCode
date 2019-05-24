@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 //n皇后问题
-
 public class queen {
     public static void main(String[] args) {
-        System.out.println(solve(5));
+        System.out.println(solve(10));
     }
     //使用回溯法
     private static List<List<String>> solve(int n){
