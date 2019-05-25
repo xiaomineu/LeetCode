@@ -1,4 +1,4 @@
-package Nqueens;
+package PermutationSequence;
 
 public class getPermut {
     public static void main(String[] args) {
