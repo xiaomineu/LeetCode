@@ -2,7 +2,7 @@ package UniquePaths;
 
 public class unique {
     public static void main(String[] args) {
-        System.out.println(route(7,3));
+        System.out.println(route(28,12));
     }
     private static int route(int m,int n){
         int [][] template=new int[m][n];
