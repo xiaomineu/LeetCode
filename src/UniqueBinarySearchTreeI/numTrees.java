@@ -5,7 +5,6 @@ public class numTrees {
         System.out.println(numTree(4));
     }
     //找规律
-
     /**
      * DP算法：
      * 第n个节点插入前n-1个节点构成的树
