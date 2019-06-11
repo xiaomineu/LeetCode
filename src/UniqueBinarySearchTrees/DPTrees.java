@@ -13,10 +13,13 @@ class TreeNode{
 }
 public class DPTrees {
     public static void main(String[] args) {
-
+        System.out.println(generate(2));
     }
 
     /**
+     * DP算法，简单高效，但是思考较困难
+     * 将1放入1号位置
+     * 将2插入1之前或者1之后两种操作
      * 将添加的节点作为原来节点的头结点
      * 或者遍历节点右节点，将可以增加的节点添加到每个遍历的右节点的最右边
      * @param n
@@ -34,6 +37,7 @@ public class DPTrees {
             return;
         }
         //分成两种情况是：一种是插入头部，一种是插到右边
+        //节点插向头部以及插向右边两种情况分类讨论
         //遍历所有右子树的所有右节点，插到右节点的右边就可以。如果右节点不为空，插入的新节点的左指向原右节点的右
         Trees(n-1,list);
         int size=list.size();
@@ -43,6 +47,7 @@ public class DPTrees {
             newNode.left=treeNode;
             list.add(newNode);
             TreeNode root=treeNode;
+            //找到所有右节点对应的val,重新构建树
             while(treeNode!=null){
                 TreeNode node=new TreeNode(n);
                 list.add(copyAndCreate(root,treeNode.val,node));
@@ -50,6 +55,7 @@ public class DPTrees {
             }
         }
     }
+    //重新构建树，不能影响之前树的排列，需要重新构建BST
     private static TreeNode copyAndCreate(TreeNode root,int val,TreeNode node){
         if(root==null){
             return null;
