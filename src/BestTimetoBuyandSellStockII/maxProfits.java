@@ -15,6 +15,7 @@ public class maxProfits {
                 minPrice=prices[i];
             }
             //判断当前是否有利润，有利润就卖出
+            //如何解决抛出之后再买入的问题，抛出之后，此时的价格作为哨兵
             if(prices[i]-minPrice>profit){
                 profit=prices[i]-minPrice;
                 maxProfitSum+=profit;
