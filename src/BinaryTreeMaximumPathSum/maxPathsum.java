@@ -16,6 +16,7 @@ public class maxPathsum {
             return 0;
         }
         //找到左右节点中最大值;
+        //最大路径和，子节点至根节点只有一条路径
         int left=Math.max(0,maxPath(root.left));
         int right=Math.max(0,maxPath(root.right));
         max=Math.max(max,left+right+root.val);
