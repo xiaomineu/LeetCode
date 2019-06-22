@@ -4,7 +4,11 @@ import java.util.*;
 
 public class findLadders {
     public static void main(String[] args) {
-
+        String beginWord="hit";
+        String endWord="cog";
+        String[] word={"hot","dot","dog","lot","log","cog"};
+        List<String> wordList=Arrays.asList(word);
+        System.out.println(find(beginWord,endWord,wordList));
     }
     private static List<List<String>> find(String beginWord,String endWord,List<String> wordList){
         Set<String> wordDict=new HashSet<>(wordList);
