@@ -30,7 +30,7 @@ public class ladderLength {
                         if(dict.contains(result)){
                             if(result.equals(endWord))return level+1;
                             queue.add(result);
-                            dict.remove(result);
+                            dict.remove(result);//遍历过的字符串，从图中删除，避免重复遍历;
                         }
                     }
                     chars[j]=temp;
