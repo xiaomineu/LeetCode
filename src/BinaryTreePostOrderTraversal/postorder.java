@@ -36,7 +36,9 @@ public class postorder {
         postTraversal(root.right,result);
         result.add(root.val);
     }
-    //使用堆栈进行辅助进行前序遍历，但是节点数值插入始终插在初始，相当于将前序遍历reverse
+    //使用堆栈进行辅助进行遍历，遍历顺序是root,rightNode,leftNode;
+    //将数值插入容器中，相当于对遍历进行reverse;
+    //得到的结果为leftNode,rightNode,root,即为后序遍历;
     public List<Integer> post(TreeNode root){
         LinkedList<Integer> list=new LinkedList<>();
         Stack<TreeNode> template=new Stack<>();
