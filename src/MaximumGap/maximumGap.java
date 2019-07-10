@@ -1,6 +1,9 @@
 package MaximumGap;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
 
 public class maximumGap {
     public static void main(String[] args) {
@@ -46,10 +49,10 @@ public class maximumGap {
         }
         int maxGap=Integer.MIN_VALUE;
         int previous=min;
-        for(int i=0;i<nums.length;i++){//遍历所有桶,计算桶间的最大间距;
-            if(bucks[i]==null)continue;
-            maxGap=Math.max(maxGap,Math.max(bucks[i][0]-previous,bucks[i][1]-bucks[i][0]));//桶内间距，桶间间距最大值;
-            previous=bucks[i][1];
+        for(int i=0;i<nums.length;i++) {//遍历所有桶,计算桶间的最大间距;
+            if (bucks[i] == null) continue;
+            maxGap = Math.max(maxGap, Math.max(bucks[i][0] - previous, bucks[i][1] - bucks[i][0]));//桶内间距，桶间间距最大值;
+            previous = bucks[i][1];
         }
         return maxGap;
     }
